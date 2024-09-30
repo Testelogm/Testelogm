@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CS100 Technical Documentation</title>
+
+  <!-- Link to Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* Set the entire body to have a green background */
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #489159;
+      height: 100vh; /* Full viewport height */
+      position: relative;
+      font-family: 'Open Sans', sans-serif; /* Set the global font to Open Sans */
+    }
+
+    /* Background image around the SVG */
+    .background-container {
+      width: 100%;
+      height: 100%;
+      background: url('GMbackground.jpg') no-repeat center;
+      background-size: contain;
+      background-position: center center;
+      background-attachment: fixed;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
+
+    /* Position the company logo in the top-right corner */
+    .logo {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: auto;
+      height: 80px;
+      z-index: 1;
+    }
+
+    /* Center the SVG on the page */
+    .svg-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+      width: 90vw;
+      height: 72vh;
+    }
+
+    embed {
+      width: 100%;
+      height: 125%;
+      display: block;
+      max-width: 100%;
+    }
+
+    /* Container for the image links on the left side */
+    .left-links, .right-links {
+      position: absolute;
+      top: 45%;
+      transform: translateY(-50%);
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      text-align: center;
+    }
+
+    /* Position left links */
+    .left-links {
+      left: 30px; /* Position near the left edge */
+    }
+
+    /* Position right links */
+    .right-links {
+      right: 13px; /* Position near the right edge */
+    }
+
+    /* Image links */
+    .left-links img,
+    .right-links img {
+      width: 85px;
+      height: auto;
+      cursor: pointer;
+    }
+
+    /* Link text styles */
+    .left-links a,
+    .right-links a {
+      text-decoration: none;
+      color: black; /* Always white text */
+      font-size: 16px; /* Set readable font size */
+      font-weight: 600; /* Slightly bold for visibility */
+      display: block; /* Ensures text stays below the image */
+      margin-top: 0px; /* Adds some space between the image and text */
+    }
+
+    /* Optional: Add hover effect */
+    .left-links a:hover,
+    .right-links a:hover {
+      opacity: 0.6; /* Slight transparency on hover */
+    }
+
+    /* Print-specific styles */
+    @media print {
+      /* Hide everything except the SVG */
+      body * {
+        display: none;
+      }
+
+      /* Display only the SVG container during printing */
+      .svg-container,
+      .svg-container embed {
+        display: block;
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+      }
+
+      embed {
+        width: 100%;
+        height: 100%;
+      }
+
+      /* Ensure the left and right links are hidden */
+      .left-links, .right-links {
+        display: none !important; /* Ensure both sections are hidden */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background image -->
+  <div class="background-container"></div>
+
+  <!-- Image links on the left side -->
+  <div class="left-links">
+    <a href="main.html">CS100</a>
+    <a href="main.html">ECO 150TMP</a>
+    <a href="main.html">CM220TMP</a>
+    <a href="main.html">CM220 MT</a>
+    <a href="main.html">ARB 130</a>
+    <a href="main.html">ARB 150 DMAX</a>
+    <a href="main.html">ARB 150P</a>
+    <a href="main.html">EVO 165D</a>
+    <a href="main.html">EVO 165PL</a>
+    <a href="main.html">EVO 165DT</a>
+    <a href="main.html">EVO 205DR</a>
+    <a href="main.html">EVO 205DT</a>
+    <a href="main.html">EVO 205SURE TRAK</a>
+    <a href="main.html">EVO 205 SAFE TRAK</a>
+    <a href="main.html">EVO 205TT 360</a>
+    <a href="main.html">QC 160D</a>
+    <a href="main.html">QT 160D</a>
+    <a href="main.html">QC 160P</a>
+    <a href="main.html">QT 160P</a>
+  </div>
+
+  <!-- Image links on the right side -->
+  <div class="right-links">
+
+    <a href="main.html"><img src="home.png" alt="Home"><br>Home</a>
+    <a href="main.html"><img src="bom.png" alt="BOM"><br>B.O.M.</a>
+    <a href="main.html"><img src="Assembly.png" alt="Assembly"><br>Assembly</a>
+    <a href="main.html"><img src="colors.png" alt="Different Colours"><br>Switch Colors!</a>
+    <a href="main.html"><img src="contact.png" alt="Contact"><br>Contact</a>
+
+  </div>
+
+  <!-- SVG file container in the center -->
+  <div class="svg-container">
+    <!-- Embed the SVG file directly -->
+    <embed src="ARB 150 DMAX.svg" type="image/svg+xml" />
+  </div>
+
+</body>
+</html>
